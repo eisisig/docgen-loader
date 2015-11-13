@@ -1,14 +1,13 @@
-# json5 loader for webpack
+# react-docgen loader for webpack
 
 ## Usage
 
 ``` javascript
-var json = require("json5!./file.json5");
-// => returns file.json5 content as json parsed object
+var docs = require("!!docgen!./Component.jsx");
+// => returns Component.jsx documentation object if Component definition is found
 ```
 
-Don't forget to polyfill `require` if you want to use it in node.
-See `webpack` documentation.
+> NOTE: I use double !! to disable all other loaders. react-docgen cannot gather Component information if the Component has been babeled
 
 ## License
 
