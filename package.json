@@ -4,7 +4,7 @@
   "author": "Eisi Sig @eisisig",
   "description": "react-docgen loader",
   "peerDependencies": {
-	  "react-docgen": "^2.4.0"
+    "react-docgen": "^2.4.0"
   },
   "licenses": [
     {
@@ -12,5 +12,8 @@
       "url": "http://www.opensource.org/licenses/mit-license.php"
     }
   ],
-  "dependencies": {}
+  "dependencies": {
+    "loader-utils": "^0.2.11",
+    "marked": "^0.3.5"
+  }
 }
