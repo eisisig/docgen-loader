@@ -1,0 +1,16 @@
+{
+  "name": "docgen-loader",
+  "version": "1.0.0",
+  "author": "Eisi Sig @eisisig",
+  "description": "react-docgen loader",
+  "peerDependencies": {
+	  "react-docgen": "^2.4.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "dependencies": {}
+}
