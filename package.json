@@ -13,6 +13,7 @@
     }
   ],
   "dependencies": {
+    "colors": "^1.1.2",
     "loader-utils": "^0.2.11",
     "marked": "^0.3.5"
   }

@@ -3,22 +3,25 @@
  Author Eisi Sig @eisisig
  */
 var docgen = require('react-docgen');
+var findAllComponentDefinitions = require('react-docgen/dist/resolver/findAllComponentDefinitions');
 var marked = require('marked');
+var colors = require('colors');
 var loaderUtils = require('loader-utils');
 
 module.exports = function ( source ) {
+
 	this.cacheable && this.cacheable();
 	var query = loaderUtils.parseQuery(this.query);
 
 	var value = {};
 
 	try {
-		value = docgen.parse(source);
+		value = docgen.parse(source, findAllComponentDefinitions);
 		if ( query.markdownDescription && value.description ) {
 			value.description = marked(value.description);
 		}
 	} catch ( e ) {
-		// docgen - Error: No suitable component definition found.
+		console.log('docgen-loader'.red,  e);
 	}
 
 	this.values = [value];
