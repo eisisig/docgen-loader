@@ -21,7 +21,7 @@ module.exports = function ( source ) {
 			value.description = marked(value.description);
 		}
 	} catch ( e ) {
-		console.log('docgen-loader'.red,  e);
+		// console.log('docgen-loader'.red,  e);
 	}
 
 	this.values = [value];
