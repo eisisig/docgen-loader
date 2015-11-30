@@ -5,7 +5,6 @@
 var docgen = require('react-docgen');
 var findAllComponentDefinitions = require('react-docgen/dist/resolver/findAllComponentDefinitions');
 var marked = require('marked');
-var colors = require('colors');
 var loaderUtils = require('loader-utils');
 
 module.exports = function ( source ) {
@@ -21,7 +20,7 @@ module.exports = function ( source ) {
 			value.description = marked(value.description);
 		}
 	} catch ( e ) {
-		// console.log('docgen-loader'.red,  e);
+		// console.log('ERROR in docgen-loader',  e);
 	}
 
 	this.values = [value];
