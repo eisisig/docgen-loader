@@ -16,13 +16,16 @@ module.exports = function ( source ) {
 
 	try {
 		value = docgen.parse(source, findAllComponentDefinitions);
-		if ( query.markdownDescription && value.description ) {
-			value.description = marked(value.description);
+		if ( query.markdownDescription) {
+			value = value.map(function (doc) {
+				if (doc.description) {
+					doc.description = marked(doc.description);
+				}
+			});
 		}
 	} catch ( e ) {
 		// console.log('ERROR in docgen-loader',  e);
 	}
 
-	this.values = [value];
 	return "module.exports = " + JSON.stringify(value, undefined, "\t");
 };
