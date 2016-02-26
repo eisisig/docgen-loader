@@ -21,6 +21,7 @@ module.exports = function ( source ) {
 				if (doc.description) {
 					doc.description = marked(doc.description);
 				}
+				return doc;
 			});
 		}
 	} catch ( e ) {
