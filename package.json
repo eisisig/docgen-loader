@@ -13,7 +13,7 @@
     }
   ],
   "dependencies": {
-    "loader-utils": "^0.2.11",
+    "loader-utils": "^0.2.12",
     "marked": "^0.3.5"
   }
 }
