@@ -6,6 +6,10 @@
   "peerDependencies": {
     "react-docgen": "^2.4.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eisisig/docgen-loader.git"
+  },
   "licenses": [
     {
       "type": "MIT",
