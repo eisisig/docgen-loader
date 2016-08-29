@@ -7,6 +7,10 @@ var findAllComponentDefinitions = require('react-docgen/dist/resolver/findAllCom
 var marked = require('marked');
 var loaderUtils = require('loader-utils');
 
+if ( findAllComponentDefinitions.hasOwnProperty('default') ) {
+	findAllComponentDefinitions = findAllComponentDefinitions.default
+}
+
 module.exports = function ( source ) {
 
 	this.cacheable && this.cacheable();
@@ -16,7 +20,7 @@ module.exports = function ( source ) {
 
 	try {
 		value = docgen.parse(source, findAllComponentDefinitions);
-		if ( query.markdownDescription) {
+		if ( value && query.markdownDescription) {
 			value = value.map(function (doc) {
 				if (doc.description) {
 					doc.description = marked(doc.description);
