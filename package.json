@@ -18,6 +18,6 @@
   ],
   "dependencies": {
     "loader-utils": "^0.2.15",
-    "marked": "^0.3.6"
+    "marked": "^0.6.2"
   }
 }
